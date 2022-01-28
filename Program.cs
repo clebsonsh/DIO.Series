@@ -6,7 +6,10 @@ namespace DIO.Series
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Serie serie = new Serie(
+                1, Genre.Animated, "Star Wars", "Long time ago", 1989
+            );
+            Console.WriteLine(serie);
         }
     }
 }
