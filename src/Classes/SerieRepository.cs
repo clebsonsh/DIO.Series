@@ -2,39 +2,39 @@ using System;
 using System.Collections.Generic;
 using DIO.Series.src.Interfaces;
 
-namespace DIO.Series.src.Classes
+namespace DIO.Series
 {
 	public class SerieRepository : IRepository<Serie>
 	{
         private List<Serie> listSerie = new List<Serie>();
-		public void Create(Serie entity)
+		public void Create(Serie serie)
 		{
-			throw new NotImplementedException();
+            listSerie.Add(serie);
 		}
 
 		public void Destroy(int id)
 		{
-			throw new NotImplementedException();
+            listSerie[id].destroy();
 		}
 
 		public List<Serie> List()
 		{
-			throw new NotImplementedException();
+            return listSerie;
 		}
 
 		public int NextId()
 		{
-			throw new NotImplementedException();
+            return listSerie.Count;
 		}
 
 		public Serie ReturnById(int id)
 		{
-			throw new NotImplementedException();
+            return listSerie[id];
 		}
 
-		public void Update(int id, Serie entity)
+		public void Update(int id, Serie serie)
 		{
-			throw new NotImplementedException();
+            listSerie[id] = serie;
 		}
 	}
 }

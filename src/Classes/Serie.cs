@@ -8,6 +8,7 @@ namespace DIO.Series
         private string Title { get; set; }
         private string Description { get; set; }
         private int Year { get; set; }
+        private bool Destroyed { get; set; }
 
         // Methods
         public Serie(
@@ -22,6 +23,7 @@ namespace DIO.Series
             this.Title = title;
             this.Description = description;
             this.Year = year;
+            this.Destroyed = false;
         }
 
         public override string ToString()
@@ -42,6 +44,15 @@ namespace DIO.Series
         public int returnId()
         {
             return this.Id;
+        }
+
+        public bool returnDestroyed()
+        {
+            return this.Destroyed;
+        }
+        public void destroy()
+        {
+            this.Destroyed = true;
         }
     }
 }
