@@ -6,7 +6,7 @@ namespace DIO.Series.src.Interfaces
     {
         List<T> List();
         T ReturnById(int id);
-        void Create(T entity);
+        void Add(T entity);
         void Destroy(int id);
         void Update(int id, T entity);
         int NextId();

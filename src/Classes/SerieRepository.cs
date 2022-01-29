@@ -7,7 +7,7 @@ namespace DIO.Series
 	public class SerieRepository : IRepository<Serie>
 	{
         private List<Serie> listSerie = new List<Serie>();
-		public void Create(Serie serie)
+		public void Add(Serie serie)
 		{
             listSerie.Add(serie);
 		}
